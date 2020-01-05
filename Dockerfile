@@ -6,4 +6,4 @@ RUN useradd -ms /bin/bash builder \
 USER builder
 WORKDIR /home/builder
 ENV TERM=screen
-RUN --mount=type=bind,src=initenv.sh,dest=initenv.sh initenv.sh
+RUN --mount=type=bind,source=initenv.sh,target=initenv.sh initenv.sh
