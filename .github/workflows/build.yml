@@ -17,6 +17,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+
+    - name: Enable experimental features
+      run: |
+        echo '{
+          "experimental": true
+        }' | sudo tee /etc/docker/daemon.json
+        sudo service docker restart
+
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
