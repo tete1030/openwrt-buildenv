@@ -6,6 +6,7 @@
 name: Build Openwrt Buildenv
 
 on:
+  deployment:
   push:
     paths:
     - 'Dockerfile'
