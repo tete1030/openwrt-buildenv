@@ -43,3 +43,6 @@ wget
 curl
 nginx
 rsync
+gawk
+apt-transport-https
+ca-certificates
